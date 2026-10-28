@@ -197,8 +197,7 @@ List:
 All errors use the same shape:
 
 ```json
-{ "status": 400, "message": "Only PDF files are allowed." }
-```
+{ "status": 400, "message": "Only PDF files are allowed." }```
 
 | Situation | Status |
 |---|---|
