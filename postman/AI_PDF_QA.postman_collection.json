@@ -1,0 +1,115 @@
+{
+  "info": {
+    "_postman_id": "6036147c-2750-493d-977e-5eb4900e6718",
+    "name": "AI PDF QA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56394563",
+    "_collection_link": "https://go.postman.co/collection/56394563-6036147c-2750-493d-977e-5eb4900e6718?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Upload PDF",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": [
+                "/C:/Users/priya/Downloads/AI_PDF_QA_RAG_Project_Guide.pdf"
+              ]
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/documents/upload?",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "documents",
+            "upload"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List PDFs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/documents/search",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "documents",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ask",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete PDF",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}
