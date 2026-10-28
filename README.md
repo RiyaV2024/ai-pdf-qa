@@ -83,7 +83,7 @@ src/main/java/com/example/ai_pdf_qa
 **1. Clone the repository**
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/RiyaV2024/ai-pdf-qa.git
 cd ai-pdf-qa
 ```
 
@@ -94,14 +94,20 @@ ollama pull llama3.2:3b
 ollama pull nomic-embed-text
 ```
 
-**3. Create a `.env` file** in the project root (next to `pom.xml`). This file is listed in `.gitignore` and is never committed.
+**3. Create a `.env` file** in the project root (next to `pom.xml`) by copying the example:
+
+```powershell
+Copy-Item .env.example .env      # macOS/Linux: cp .env.example .env
+```
+
+It contains:
 
 ```
 DB_USER=raguser
 DB_PASSWORD=ragpass
 ```
 
-Use your own values if you prefer. Docker Compose reads this file automatically.
+Use your own values if you prefer. The `.env` file is listed in `.gitignore` and is never committed. Docker Compose reads it automatically.
 
 **4. Start the database**
 
@@ -120,6 +126,13 @@ PowerShell:
 ```powershell
 $env:DB_USER="raguser"
 $env:DB_PASSWORD="ragpass"
+.\mvnw.cmd spring-boot:run
+```
+
+macOS/Linux:
+
+```bash
+export DB_USER=raguser DB_PASSWORD=ragpass
 ./mvnw spring-boot:run
 ```
 
@@ -184,7 +197,7 @@ List:
 All errors use the same shape:
 
 ```json
-{ "status": 400, "message": "Sirf PDF file allowed hai." }
+{ "status": 400, "message": "Only PDF files are allowed." }
 ```
 
 | Situation | Status |
