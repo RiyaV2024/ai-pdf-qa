@@ -18,7 +18,7 @@ public class PdfExtractionService {
         }
         String name = file.getOriginalFilename();
         if (name == null || !name.toLowerCase().endsWith(".pdf")) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Only PDF file allowed .");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Only PDF file are allowed .");
         }
     }
     public List<Document> extract(MultipartFile file) {
@@ -40,7 +40,7 @@ public class PdfExtractionService {
             return cleaned;
         } catch (IOException e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
-                    "File padhne mein error aaya.");
+                    "Could not read the PDF file.");
         }
     }
 }
